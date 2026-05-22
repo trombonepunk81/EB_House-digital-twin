@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-surface-0: #0a0b0e;
+  --color-surface-1: #12141a;
+  --color-surface-2: #1a1d26;
+  --color-surface-3: #222533;
+  --color-accent: #4f8ef7;
+  --color-accent-dim: #2d5cb8;
+  --color-highlight: #f7c34f;
+  --color-success: #4fca8e;
+  --color-text: #c8cedd;
+  --color-text-dim: #6b7591;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--color-surface-0);
+  color: var(--color-text);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-dim);
+}
+
+/* IFC canvas container */
+.ifc-canvas-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.ifc-canvas-container canvas {
+  outline: none;
+}
